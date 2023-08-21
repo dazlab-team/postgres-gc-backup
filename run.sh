@@ -1,6 +1,8 @@
 #! /bin/sh
 
 set -e
+set -o errexit # stop script immediately on error
+set -o pipefail # enable strict command pipe error detection
 
 if [ "${GCS_KEY_FILE_PATH}" = "" ]; then
   echo "You need to set the GCS_KEY_FILE_PATH	environment variable."

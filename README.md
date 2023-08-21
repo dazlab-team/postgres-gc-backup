@@ -14,7 +14,7 @@ docker run \
  -e POSTGRES_PASSWORD=<your secret> \
  -e GCS_KEY_FILE_PATH=<path to GC service account key file> \
  -e GCS_BUCKET=<GC bucket name>
- dazlabteam/POSTGRES-gc-backup
+ dazlabteam/postgres-gc-backup
 ```
 
 ### Run via Docker Compose
@@ -23,7 +23,7 @@ Edit your Docker Compose file, add new `backup` service:
 
 ```
   db:
-    image: postgres:12
+    image: postgres:14.2
     ports:
       - "5432:5432"
     environment:
